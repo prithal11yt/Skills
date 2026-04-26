@@ -13,6 +13,42 @@ You think like a sharp media editor with the eye of a viral content analyst. You
 
 ---
 
+## PERFORMANCE INTELLIGENCE — What's Actually Working
+
+Analysis of @NotesByPrithal's real tweet performance (as of April 2026):
+
+**#1 FORMAT: Tool Discovery Lists** — 225 views (10x the average)
+The single highest-performing tweet was a numbered list of 5 AI tools with named functions and a product visual attached. Format: hook → numbered list (Tool Name — what it does) → image from one of the tools. This must be in every batch.
+
+**#2 FORMAT: Visual/Media tweets** — 48–101 views
+Tweets with attached video, images, or YouTube thumbnails consistently outperform pure text. Any tweet that can carry a visual should.
+
+**#3 FORMAT: Specific stats + named tools** — 22–42 views
+Tweets that combine a real number (38%, $300/month, 1 person doing 300 tickets/day) with named tools or a numbered stack perform better than generic insight tweets.
+
+**Underperforming: Pure insight/philosophy tweets** — 16–27 views
+"Unspoken truth" style tweets without concrete tools, numbers, or visuals land in the 16–27 view range. Still write them — they build voice credibility — but don't anchor the batch on them.
+
+**What makes something bookmark-worthy (the save signal):**
+- A numbered list of tools the reader can act on immediately
+- A stat that reframes how they see their own workflow
+- A "stack" format: here's the exact setup + what it costs
+- Something they'll want to share with another founder
+
+**What makes something share-worthy:**
+- Tool discovery: "I didn't know this existed"
+- Counterintuitive math: the $500/day Claude vs $49/month SaaS example
+- A visual that is self-explanatory (chart, product screenshot, before/after)
+- An AI humor moment everyone's experienced
+
+**Mandatory per-batch minimums (enforce at Phase 4 self-check):**
+- At least 2 tweets featuring named AI tools with specific functions
+- At least 1 dedicated Tool Discovery list (Template 2 is the home for this — it is non-negotiable)
+- At least 1 tweet with a visual (Template 10 covers this — never skip it)
+- At least 1 tweet with a real number tied to a specific tool or outcome
+
+---
+
 ## PHASE 0: Bootstrap — Load Configs
 
 ### Step 0A: Load Voice Profile
@@ -437,7 +473,7 @@ Remove any candidate that touches these topics — no exceptions:
 
 ### Step 2C: Score Each Remaining Candidate
 
-Apply the 5-dimension rubric. Max 15 points per candidate.
+Apply the 6-dimension rubric. Max 18 points per candidate.
 
 | Dimension | 3 pts | 2 pts | 1 pt |
 |-----------|-------|-------|------|
@@ -446,6 +482,17 @@ Apply the 5-dimension rubric. Max 15 points per candidate.
 | Contrarian potential | Surprising, counterintuitive, or challenges a common belief | Adds nuance to consensus | Confirms conventional wisdom |
 | Specificity | Real numbers, named tools, specific case studies | Partial specifics | Generic claim with no evidence |
 | Niche fit | AI + founders exact match | Only AI or only founders | Adjacent (startup, productivity, etc.) |
+| Bookmark/Share signal | Named tools + format people save AND share (list, stack, how-to) | Either bookmark OR share potential but not both | Generic insight with low save/share motivation |
+
+**Bookmark/Share signal explained:**
+- 3 pts: Content includes named tools/products a founder can act on immediately, AND the format is inherently saveable (numbered list, stack breakdown, cost comparison). These get saved AND forwarded.
+- 2 pts: Either a strong save format (list) without named tools, OR named tools without a clean list structure.
+- 1 pt: General insight, philosophy, or contrarian take with no tool or format hook.
+
+**Auto-boost rules for Bookmark/Share signal:**
+- Any content that contains 3+ named tools with one-liner descriptions → always 3 pts on this dimension
+- Any content featuring a "stack" (tool + role + cost) → always 3 pts
+- Any content that is purely philosophical with no named tool → capped at 1 pt on this dimension, regardless of other scores
 
 If TOPIC_FOCUS is set: multiply the Niche fit score by 2 for candidates matching the topic.
 
@@ -498,6 +545,17 @@ From the voice profile you loaded in Phase 0:
 - **Under 280 characters total:** Count carefully. Every newline character counts as 1 toward the limit
 - **No hashtags** unless exactly 1 is completely natural (not as a category label — as a real word). Never 2+
 - **No banned words:** Scan before finalizing — game-changer, disruptive, hustle, grind, crush it, synergy, paradigm shift, thought leader, go viral, ninja, rockstar, leverage (as a verb), 10x (unless with real data attached)
+
+**Bookmark Hook Rule (applies to any tweet with a list or stack):**
+Every list-format tweet must end with one of these closing triggers — they exist to make the reader click save:
+- "Save this." (most direct — use by default)
+- "Save this. Come back to it Friday." (adds urgency)
+- "Pick one. Start today." (action-biased)
+- "The full stack is here." (for comprehensive tool lists)
+Never end a list tweet with a question — it dilutes the save signal.
+
+**Share Hook Rule (applies to stat tweets and tool tweets):**
+A tweet is highly shareable when it makes the reader think "my co-founder / team / friend needs to see this." Before finalizing any tweet with a stat or a named tool, ask: would a founder forward this in a Slack DM? If yes, it's share-worthy. If it's just interesting to them personally, tighten it until it's useful enough to forward.
 
 ### FounderWing Mention Rule
 
@@ -552,59 +610,79 @@ Prompting is a skill. Systems are leverage.
 
 ---
 
-### Template 2 — The List
+### Template 2 — The Tool Discovery List
 
-**Goal:** Give founders a scannable, specific, immediately useful list of things they can act on.
+**This is the #1 performing format for @NotesByPrithal. Mandatory every single run. Never skip or replace with a non-tool list.**
 
-**Source priority — Reddit list posts first:** If a Reddit post with `has_list: true` scored 9+/15 this run (extracted in Step D3.5), use it as the primary source for this template — ahead of news articles, Product Hunt, or HN. These posts are community-curated, real, and already validated by upvotes. The r/artificial "AI agent stack" format (listing companies building for AI agents with descriptions) is the canonical example: it's gold for founders who want to know what's being built.
+**What makes this format work (proven by 225-view benchmark):**
+- Every item is a NAMED tool (not "an AI scheduling tool" — "Reclaim.ai")
+- Every item has a one-liner naming the specific job it does ("auto-blocks your deep work hours")
+- A visual is attached — product screenshot, tool banner, or product card
+- The hook makes a promise the list delivers on
 
-From the LIST_DATA extracted in D3.5, filter for founder-relevant items — keep tools a non-technical founder would actually use or care about. Remove developer-only infrastructure.
+**Source priority order (highest to lowest):**
+1. **Product Hunt + AI tool directories this week** — what's newly launched and already getting upvotes
+2. **Reddit list posts** with `has_list: true` and score ≥ 9/18 from D3.5 — community-curated, validated by upvotes
+3. **Source F (Product Hunt WebSearch)** — trending tools with high upvote counts
+4. **Research synthesis** — if no single source has a ready list, build one from the best tool candidates across all Phase 1 sources
 
-**Single-tweet version (≤7 items after filtering):**
-Structure:
-Line 1 (hook): A bold claim about what the list delivers.
-Blank line.
-Numbered list of up to 7 specific items — named tool/company + one-line description.
-Blank line.
-Final line: A confident closing ("Save this." / "Pick one. Start today." / "The full stack is here.")
+**Two sub-formats — choose based on the story:**
 
-**Thread option (8+ items after filtering):**
-When `LIST_DATA.count ≥ 8`, output TWO versions — Prithal picks which to post:
-
+**Sub-format 2A — "Tools that do [specific job]"** (most bookmark-worthy)
+Hook frames a specific problem. List delivers named tools that solve it.
 ```
-TWEET 2A — Single Tweet (condensed)
-[Hook line]
+[Problem or job to be done] — here's what I'd use:
 
-1/ [Best item] — [description]
-2/ [Best item] — [description]
-3/ [Best item] — [description]
-4/ [Best item] — [description]
-5/ [Best item] — [description]
+1. [Tool name] — [what it does, specifically]
+2. [Tool name] — [what it does]
+3. [Tool name] — [what it does]
+4. [Tool name] — [what it does]
+5. [Tool name] — [what it does]
 
 Save this.
-
-TWEET 2B — Thread (for more reach)
-Tweet 1: [Hook line]
-
-The companies building the AI agent stack right now: 🧵
-
-Tweet 2: 1/ [Tool name]
-[What it does for founders in 1-2 sentences]
-
-Tweet 3: 2/ [Tool name]
-[Description]
-
-... (one tweet per item)
-
-Final tweet: Save this thread.
-The full AI-native stack for solo founders — every tool named above is real and in production.
 ```
 
-**Emotion target:** YAY or OHHH
+**Sub-format 2B — "The AI Stack"** (most share-worthy — cost-anchored)
+Hook frames a cost or hire being replaced. List shows exact stack + price.
+```
+I replaced [hire/tool/cost] with AI.
 
-**Voice note:** Every item must be named and specific. "An AI email tool" is not allowed. "AgentMail — gives AI agents their own inbox so they can send and receive email autonomously" is. Strip out any items that are pure developer APIs with no founder use case. The list must be scannable in under 5 seconds per item.
+The stack (~$[total]/month):
+1. [Tool] — [role it replaces] ($[X]/mo)
+2. [Tool] — [role] ($[X]/mo)
+3. [Tool] — [role] ($[X]/mo)
+4. [Tool] — [role] ($[X]/mo)
+5. [Tool] — [role] ($[X]/mo)
 
-**Character count warning:** A 5-item list with newlines eats characters fast. Count 2A carefully. If over 280 characters, cut the weakest item and tighten all others. Thread tweets (2B) have no 280-char constraint per tweet but keep each item tweet under 200 chars for readability.
+[Total] for what would cost [$Y]. Pick one this week.
+```
+
+**Thread option (8+ items):**
+When the source list has 8+ tools, output TWO versions — Prithal picks which to post:
+- TWEET 2A — condensed single tweet (top 5 items)
+- TWEET 2B — thread (all items, one tweet per tool)
+
+Thread format:
+```
+Tweet 1: [Hook line] 🧵
+Tweet 2: 1/ [Tool name] — [description]
+Tweet 3: 2/ [Tool name] — [description]
+...
+Final tweet: Save this thread. [Closing line]
+```
+
+**Visual mandate:** Every Template 2 tweet needs a visual suggestion in MEDIA PICKS.
+Best options in order: (1) product card from the tool's ProductHunt page, (2) homepage screenshot of the top-listed tool, (3) suggest Prithal screenshots the tool's landing page before posting.
+
+**Emotion target:** YAY (I didn't know this existed) + OHHH (this solves my exact problem)
+
+**Voice rules for this template:**
+- Every tool must be named — "an AI email tool" is banned from this template
+- Every description must name the specific job done — never generic ("helps with scheduling" → "auto-blocks your focus time so meetings can't stack up")
+- Closing line must be a call to action: "Save this." / "Pick one today." / "The full stack is here."
+- 4 strong named tools beats 7 weak ones
+
+**Character count warning:** A 5-item list with newlines eats characters fast. Count 2A carefully. If over 280 chars: tighten descriptions to ≤6 words each, then cut the weakest item. Thread tweets have no 280-char constraint per tweet but keep each under 200 chars.
 
 ---
 
@@ -920,6 +998,47 @@ We are not the same.
 
 ---
 
+### Bonus Format 4 — Tool of the Week Spotlight
+
+**This is the highest bookmark-per-character format. Use it every batch.**
+
+**Goal:** Introduce one specific AI tool a non-technical founder probably hasn't heard of yet. Not a summary — a verdict. Name it, show what it does, give an honest take on who it's for.
+
+**Source material:** Pick the single most interesting tool from Phase 1 research that isn't already covered in Tweet 2. Priority: newly launched (last 7 days), high ProductHunt upvotes, or something discovered in a Reddit thread that founders are buzzing about.
+
+**Structure:**
+```
+[Tool name] is underrated.
+
+What it does: [1 line — the specific job, in plain English]
+Who it's for: [1 line — name the exact founder type who benefits]
+What it replaced for me: [1 line — specific alternative or manual process]
+
+Try it free: [tool URL or "search it up"]
+```
+
+**Rules:**
+- Tool name in the first line — never hide what you're talking about
+- "What it replaced for me" must be specific — not "saved time" but "replaced my VA for research tasks"
+- Under 260 characters
+- No banned words. No jargon.
+- If you haven't personally tried the tool, frame it as "founders are replacing X with this" not "it replaced X for me"
+
+**Emotion target:** YAY — "I didn't know this existed"
+
+**Example in Prithal's voice:**
+```
+Perplexity is underrated.
+
+What it does: 1-hour research tasks in 5 minutes
+Who it's for: founders who Google everything before deciding
+What it replaced: my VA for competitive research
+
+Search it up. First 5 searches are free.
+```
+
+---
+
 ## PHASE 3.6: AI News Tweets (3–5 tweets)
 
 These tweets are separate from the main 10-tweet batch and the 3 bonus formats. They cover the freshest AI model launches, tool releases, and major announcements from the last 7 days — written in Prithal's voice with a founder lens. Use AI_NEWS_CANDIDATES from Source G.
@@ -1074,6 +1193,15 @@ Write 3–5 AI News Tweets using the formats above. Assign the best-fitting form
 
 Run this internal checklist. Fix any failures before printing the batch.
 
+**PERFORMANCE MINIMUMS — fix these first:**
+- [ ] Tweet 2 is a Tool Discovery List — named tools with specific one-liner descriptions, NOT a generic list
+- [ ] Tweet 2 has a visual suggestion in MEDIA PICKS (product image or screenshot)
+- [ ] At least 2 tweets in the main 10 feature named AI tools with specific functions
+- [ ] At least 1 tweet contains a real number tied to a specific tool or outcome
+- [ ] At least 1 list-format tweet ends with "Save this." or equivalent bookmark hook
+- [ ] At least 1 tweet in the batch would make a founder forward it to another founder in Slack
+
+**QUALITY CHECKS:**
 - [ ] Every tweet uses a distinct template — no two are structurally the same
 - [ ] Every first line works as a standalone scroll-stopper (read each first line in isolation — is it interesting on its own?)
 - [ ] No banned words in any tweet (mental scan: game-changer, disruptive, hustle, grind, crush it, synergy, paradigm shift, thought leader, go viral, ninja, rockstar, leverage-as-verb, 10x without data)
@@ -1084,8 +1212,9 @@ Run this internal checklist. Fix any failures before printing the batch.
 - [ ] Better Version (Tweet 9) is genuinely better than the original (specific where it was vague, direct where it hedged)
 - [ ] Media Commentary (Tweet 10) is always a visual post — never replaced by a text post
 - [ ] Media Commentary (Tweet 10) tweet is 3 lines or fewer (caption style, not commentary)
-- [ ] If LIST_DATA.count ≥ 8: both Tweet 2A (condensed) and Tweet 2B (thread) are output
+- [ ] If list source has 8+ items: both Tweet 2A (condensed) and Tweet 2B (thread) are output
 - [ ] MEDIA PICKS includes a direct image_url (not just the Reddit permalink)
+- [ ] MEDIA PICKS for Tweet 2 includes a visual source for the tool list
 - [ ] Source diversity: no more than 3 tweets from any single source type
 - [ ] Exactly 2 FounderWing mentions — natural, not forced
 - [ ] Bonus Tweet 1 ends with "What's stopping you?" or equivalent — and all math steps are technically true
@@ -1234,6 +1363,12 @@ Char count: [N]/280
 ═══════════════════════════════════════════════
 MEDIA PICKS
 ═══════════════════════════════════════════════
+Tweet 2 media (Tool Discovery List — ALWAYS required):
+  Tool featured: [Tool name at top of list]
+  Visual source: [ProductHunt page URL / tool homepage URL / direct image URL if found]
+  How to get it: [1 sentence — e.g., "Screenshot the tool's ProductHunt card" / "Right-click save the banner from [URL]" / "Screenshot tool homepage hero section"]
+  Fallback: If no image findable — screenshot the tool's landing page at [URL] before posting
+
 Tweet 10 media:
   Reddit post: [Reddit permalink URL]
   Direct image URL: [image_url from PARSE output — wget or right-click-save this directly]
@@ -1262,7 +1397,7 @@ QUALITY CHECK
 
 ═══════════════════════════════════════════════
 BONUS FORMAT SECTION — Viral Formats
-Adapted for founder/AI audience | 3 additional tweets
+Adapted for founder/AI audience | 4 additional tweets
 ═══════════════════════════════════════════════
 
 BONUS TWEET 1 — Stupidly Logical Math
@@ -1293,6 +1428,17 @@ BONUS TWEET 3 — AI Humor
 Source: [Reddit thread or HN comment this was drawn from + URL]
 Format: AI Humor | Emotion: LOL
 Char count: [N]/280
+
+---
+
+BONUS TWEET 4 — Tool of the Week Spotlight
+────────────────────────────────────────────
+[Complete tweet text — tool name in line 1, verdict structure, under 260 chars]
+
+Tool: [Tool name + URL]
+Source: [Where you found it — ProductHunt / Reddit / HN + URL]
+Format: Tool of the Week | Emotion: YAY
+Char count: [N]/260
 
 ═══════════════════════════════════════════════
 
